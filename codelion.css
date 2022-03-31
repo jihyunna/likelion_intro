@@ -16,7 +16,6 @@ body {
 h1 {
     font-size:36px;
     font-weight: bold;
-    font-style: italic;
 }
 
 
@@ -33,6 +32,7 @@ h2 {
     font-size:16px;
     color:#7c7c7c;
     font-weight: bold;
+    line-height: 16px;
 }
 
 .about-me-text {
@@ -51,7 +51,7 @@ h2 {
 }
 
 .title-box {
-    text-align: right;
+    text-align: left;
 }
 
 section {
@@ -87,8 +87,8 @@ section {
 }
 
 .sns-img {
-    width:12px;
-    height:12px;
+    width:100px;
+    height:100px;
 }
 
 .sns-wrap {
@@ -101,4 +101,18 @@ footer {
     padding: 20px;
     font-size: 12px;
     color: #919191;
+}
+
+.inner-box{
+    display: flex;
+}
+.left-box{
+    border-right:1px solid black;
+    flex:1;
+}
+.right-box{
+    flex:2;
+    width:100%;
+    margin-left:50px;
+
 }
