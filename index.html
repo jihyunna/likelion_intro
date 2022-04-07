@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="codelion.css">
     <script src="https://developers.kakao.com/sdk/js/kakao.js">
     </script>
+    <script>
+        Kakao.init('26f07cfa0dc138c4f725fa9d1f7882c0');
+    </script>
 </head>
 
 <body>
     <script type="text/javascript">
-        Kakao.init('26f07cfa0dc138c4f725fa9d1f7882c0');
         Kakao.Link.createDefaultButton({
           container: '#create-kakao-link-btn',
           objectType: 'feed',
