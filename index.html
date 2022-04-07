@@ -8,55 +8,17 @@
     <script src="https://developers.kakao.com/sdk/js/kakao.js">
     </script>
     <script>
-        Kakao.init('26f07cfa0dc138c4f725fa9d1f7882c0');
+
     </script>
 </head>
 
 <body>
-    <script type="text/javascript">
-        Kakao.Link.createDefaultButton({
-          container: '#create-kakao-link-btn',
-          objectType: 'feed',
-          content: {
-            title: '딸기 치즈 케익',
-            description: '#케익 #딸기 #삼평동 #카페 #분위기 #소개팅',
-            imageUrl:
-              'http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
-            link: {
-              mobileWebUrl: 'https://illustrious-bubblegum-94df95.netlify.app/',
-              webUrl: 'https://illustrious-bubblegum-94df95.netlify.app/',
-            },
-          },
-          social: {
-            likeCount: 286,
-            commentCount: 45,
-            sharedCount: 845,
-          },
-          buttons: [
-            {
-              title: '웹으로 보기',
-              link: {
-                mobileWebUrl: 'https://illustrious-bubblegum-94df95.netlify.app/',
-                webUrl: 'https://illustrious-bubblegum-94df95.netlify.app/',
-              },
-            },
-            {
-              title: '앱으로 보기',
-              link: {
-                mobileWebUrl: 'https://illustrious-bubblegum-94df95.netlify.app/',
-                webUrl: 'https://illustrious-bubblegum-94df95.netlify.app/',
-              },
-            },
-          ],
-        })
-      </script>
-    <a id="create-kakao-link-btn" href="javascript:;">
-        <img
-          src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
-          alt="카카오링크 보내기 버튼"
-        />
-      </a>
-      
+
+    <a id="create-kakao-link-btn" href="javascript:;" onclick="sendlink()">
+        <img src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+            alt="카카오링크 보내기 버튼" />
+    </a>
+
     <div class="mainbox">
         <div class="inner-box">
             <div class="left-box">
@@ -119,6 +81,47 @@
     <footer>
         <p>Copyright CODE LION All rights reserved. </p>
     </footer>
+    <script type="text/javascript">
+        Kakao.init('26f07cfa0dc138c4f725fa9d1f7882c0');
+        function sendlink() {
+            Kakao.Link.createDefaultButton({
+                container: '#create-kakao-link-btn',
+                objectType: 'feed',
+                content: {
+                    title: '딸기 치즈 케익',
+                    description: '#케익 #딸기 #삼평동 #카페 #분위기 #소개팅',
+                    imageUrl:
+                        'http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
+                    link: {
+                        mobileWebUrl: 'https://illustrious-bubblegum-94df95.netlify.app/',
+                        webUrl: 'https://illustrious-bubblegum-94df95.netlify.app/',
+                    },
+                },
+                social: {
+                    likeCount: 286,
+                    commentCount: 45,
+                    sharedCount: 845,
+                },
+                buttons: [
+                    {
+                        title: '웹으로 보기',
+                        link: {
+                            mobileWebUrl: 'https://illustrious-bubblegum-94df95.netlify.app/',
+                            webUrl: 'https://illustrious-bubblegum-94df95.netlify.app/',
+                        },
+                    },
+                    {
+                        title: '앱으로 보기',
+                        link: {
+                            mobileWebUrl: 'https://illustrious-bubblegum-94df95.netlify.app/',
+                            webUrl: 'https://illustrious-bubblegum-94df95.netlify.app/',
+                        },
+                    },
+                ],
+            })
+        }
+
+    </script>
 </body>
 
 </html>
